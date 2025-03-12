@@ -1,0 +1,3 @@
+snippet /abs "absolute value" iMA
+\left\vert ${1} \right\vert $0
+endsnippet
