@@ -27,16 +27,13 @@
 #                    Global Function                     #
 ##########################################################
 global
-// paltform
-       const os = require('os')
-       const platform = os.platform()
 // vscode api (necessary)
          /**
         * @param {vscode.ExtensionContext} context
          */
-        const vscode = require("vscode");
-        let editor=vscode.window.activeTextEditor
-        let document=editor.document
+        var vscode = require("vscode");
+        var editor=vscode.window.activeTextEditor
+        var document=editor.document
 
 
         // get ActiveTextEditor
@@ -49,9 +46,9 @@ global
 
 // selected text : use ``rv=visual();`` to get selected text
 
-    let selectedText = "";
+    var selectedText = "";
     vscode.window.onDidChangeTextEditorSelection((e) => {
-        const newSelectedText = e.textEditor.document.getText(e.selections[0]);
+        var newSelectedText = e.textEditor.document.getText(e.selections[0]);
         if (newSelectedText) {
             selectedText = newSelectedText;
         }
